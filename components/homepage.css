@@ -1,0 +1,40 @@
+.question-card {
+    background-color: var(--secondary-color);
+    border: 2px solid black;
+    max-width: 350px;
+    min-height: 200px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 25px;
+    position: relative;
+}
+.answer {
+
+}
+.tags {
+    display: flex;
+    justify-content:center;
+    margin: 5px;
+}
+.bookmark-svg {
+    width: 10%; height: auto;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    right: 0;
+}
+.navigation {
+    display: flex;
+}
+.home-button {
+    width: 15%; height: auto;
+    size-adjust: 10%;
+}
+.bookmark-button {
+    width: 10.4%; height: auto;
+    size-adjust: 10%;
+}
+.profile-button {
+    width: 12%; height: auto;
+    size-adjust: 10%;
+}

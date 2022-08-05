@@ -1,7 +1,2 @@
-* {
-    box-sizing: border-box;
-}
-
-h1 {
-    color: blueviolet;
-}
+@import "./components/global.css";
+@import "./components/homepage.css";
