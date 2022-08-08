@@ -8,6 +8,7 @@
     margin: 25px;
     position: relative;
     z-index: -10;
+    box-shadow: 5px 5px 5px lightgrey;
 }
 .question {
     margin-top: 40px;
@@ -33,6 +34,11 @@
     width: 40px; height: auto;
     position: absolute;
     padding: 5px;
-    top: 0;
+    top: -15px;
     right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: black;
+    /*__var(--sixth-color);*/
 }
