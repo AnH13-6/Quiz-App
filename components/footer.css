@@ -2,9 +2,13 @@
     background-color: var(--tertiary-color);
     border: 2px solid black;
     border-radius: 10px;
+    display: flex;
+    display: sticky;
+    flex-direction: column;
 }
 .navigation {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     padding: 5px;
 }
@@ -14,7 +18,7 @@
     fill: var(--primary-color)
 }
 .bookmark-button {
-    width: 10.4%; height: auto;
+    width: 35px; height: auto;
     size-adjust: 10%;
     fill: var(--primary-color)
 }

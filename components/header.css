@@ -1,7 +1,14 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
 .header {
     background-color: var(--tertiary-color);
     border: 2px solid black;
     border-radius: 10px;
+    position: sticky;
+    top: 0;
 }
 h1 {
     color: var(--primary-color);
