@@ -1,0 +1,15 @@
+.page--create {
+  padding-top: 100px;
+}
+
+.create-page__h3 {
+  margin-left: 10px;
+}
+.create-input {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.submit {
+}

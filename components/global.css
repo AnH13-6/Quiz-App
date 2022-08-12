@@ -1,14 +1,18 @@
 * {
-    box-sizing: border-box;
-    max-width: 400px;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+
+body {
+  padding-bottom: 120px;
 }
 
 :root {
-    --primary-color: white;
-    --secondary-color: rgb(156, 225, 202);
-    --tertiary-color: rgb(253, 186, 198);
-    --fourth-color: #955156;
-    --fifth-color: rgb(172, 211, 241);
-    --sixth-color: black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  --primary-color: white;
+  --secondary-color: rgb(156, 225, 202);
+  --tertiary-color: rgb(253, 186, 198);
+  --fourth-color: #955156;
+  --fifth-color: rgb(172, 211, 241);
+  --sixth-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
