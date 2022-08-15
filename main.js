@@ -10,7 +10,7 @@ wordCards.forEach((wordCard) => {
   Card(wordCard);
 });
 
-const main = document.querySelector('[data-js="main"]');
+const main = document.querySelector('[data-page="home"]');
 
 const riddles = [
   { question: "Was ist der Unterschied zwischen einer Ente?", answer: "tja" },
