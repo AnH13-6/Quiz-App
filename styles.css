@@ -2,4 +2,5 @@
 @import "./components/header.css";
 @import "./components/homepage.css";
 @import "./components/footer.css";
-@import "./components/profile-page.css"
+@import "./components/profile-page.css";
+@import "./components/create-page.css";
