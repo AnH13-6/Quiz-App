@@ -11,7 +11,7 @@
 <body>
     <div class="flex-container">
     <header class="header">
-        <h1>Kanji 漢字</h1>
+        <h1 class="headline" data-js="headline">Kanji 漢字</h1>
     </header>
     <main class="page page--home" data-page="home">
         <article class="question-card" data-js="wordCard">
@@ -38,6 +38,7 @@
                     <svg viewBox="0 0 384 512"><path d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z"/></svg>
                 </button>
         </article>
+        <ul role="list" class="card-list" data-js="cards"></ul>
         </div>
     </main>
     <main class="page page--bookmark hidden">
@@ -71,14 +72,18 @@
     </main>
     <main class="page page--create hidden" data-page="create">
         <section class="create-page__content">
-        <h3 class="create-page__h3">Add question:</h3>
-        <input class="create-input" id="input-question" type="textarea">
-        <h3 class="profile-page__h3">Add answer:</h3>
-        <input class="create-input" id="input-answer" type="text">
-        <h3 class="profile-page__h3">Add tags:</h3>
-        <input class="create-input" id="input-tags" type="text">
-        <button class="submit" type="submit">Submit</button>
-        </section>
+            <form data-js="form">
+                <fieldset class="fieldset">
+                    <label for="add-question">Add Kanji/word:</label>
+                <textarea name="question" class="create-input" id="inputQuestion" placeholder="Add Kanji/word" rows="3" cols="20" required></textarea> 
+                <label  for="add-question">Add translation/readings:</label>
+        <textarea name="answer" class="create-input" id="input-answer" type="text" placeholder="Add translation/readings" rows="3" cols="20" required></textarea> 
+        <label for="add-tags">Add tags:</label>
+        <textarea name ="tags" class="create-input" id="input-tags" type="text" placeholder="Add tags, for example level-1" rows="2" cols="20"></textarea> 
+        <button class="submit" type="submit">Create card</button>
+    </fieldset>
+    </form>
+    </section>
     </main>
     <main class="page page--profile hidden" data-page="profile">
         <div class="profile-page__top-part">

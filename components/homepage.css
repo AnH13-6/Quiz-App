@@ -29,7 +29,7 @@
 .hidden {
   display: none;
 }
-.tags {
+.card__tag-list[role="list"] {
   display: flex;
   justify-content: left;
   gap: 8px;
