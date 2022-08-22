@@ -10,7 +10,7 @@ wordCards.forEach((wordCard) => {
   Card(wordCard);
 });
 
-const main = document.querySelector('[data-js="home"]');
+const main = document.querySelector('[data-page="home"]');
 
 let cards = [];
 
