@@ -12,31 +12,47 @@ wordCards.forEach((wordCard) => {
 
 const main = document.querySelector('[data-page="home"]');
 
-const riddles = [
-  { question: "Was ist der Unterschied zwischen einer Ente?", answer: "tja" },
-  { question: "Wie warm ist es über den Berg?", answer: "2Grad" },
-  { question: "Ja?", answer: "nein" },
-];
+let cards = [];
 
-riddles.forEach((riddle) => {
-  const questionCard = document.createElement("article");
-  questionCard.classList.add("card");
+const form = document.querySelector('[data-js="form"]');
+const cardsContainer = document.querySelector('[data-js="cards"]');
 
-  const question = document.createElement("h2");
-  question.innerText = riddle.question;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  const button = document.createElement("button");
-  button.classList.add("card__button");
-  button.innerText = "show answer";
-  button.setAttribute("data-js", "button");
+  const questionElement = form.elements.question;
+  const answerElement = form.elements.answer;
+  const tagsElement = form.elements.tags;
 
-  const answer = document.createElement("p");
-  answer.classList.add("card__answer", "hidden");
-  answer.innerText = riddle.answer;
-  answer.setAttribute("data-js", "answer");
+  const newCard = {
+    question: questionElement.value,
+    answer: answerElement.value,
+    tags: tagsElement.value
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter((tag) => tag.length),
+  };
 
-  questionCard.append(question, button, answer);
-  main.append(questionCard);
+  cards = [newCard, ...cards];
+  renderCards();
 
-  Card(questionCard);
+  event.target.reset();
+  questionElement.focus();
 });
+
+function renderCards() {
+  cardsContainer.innerHTML = "";
+
+  cards.forEach((card) => {
+    const cardElement = document.createElement("li");
+    cardElement.className = "question-card";
+    cardElement.innerHTML = `
+      <p>${card.question}</p>
+      <p>${card.answer}</p>
+      <ul role="list" class="card__tag-list">
+        ${card.tags.map((tag) => `<li class="card__tag">${tag}</li>`).join("")}
+      </ul>
+  `;
+    cardsContainer.append(cardElement);
+  });
+}

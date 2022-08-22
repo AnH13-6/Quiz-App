@@ -11,5 +11,11 @@
   border-radius: 10px;
 }
 
-.submit {
+.fieldset {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin: 10px 0;
+  display: grid;
+  justify-items: start;
+  gap: 5px;
 }
